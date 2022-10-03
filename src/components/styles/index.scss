@@ -16,6 +16,7 @@ code {
 .main {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 12px;
 
   display: flex;
   flex-direction: column;
@@ -129,11 +130,20 @@ code {
 }
 
 .checkbox {
+  width: 100%;
   align-self: flex-start;
+  position: relative;
+
+  &__field {
+    padding: 0;
+    margin: 0;
+  }
 
   &__box {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
     margin-bottom: 26px;
 
     &:nth-last-child(1) {
@@ -158,4 +168,45 @@ code {
     text-decoration: line-through;
   }
 
+  &__delete {
+    width: 25px;
+    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(242deg) brightness(83%) contrast(90%);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    padding: 12px 26px;
+
+    border: none;
+    border-radius: 4px;
+    background-color: #eb5757;
+
+    font-weight: 600;
+    font-size: 12px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--img {
+      width: 15px;
+      filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(36deg) brightness(107%)
+        contrast(105%);
+      margin-right: 5px;
+    }
+  }
 }
